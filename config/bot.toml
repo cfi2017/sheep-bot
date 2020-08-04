@@ -1,0 +1,11 @@
+token = ""
+
+[db]
+host = "localhost"
+port = 3306
+username = "root"
+password = "password"
+database = "sheep"
+
+[colors]
+image_endpoint = "en0.io/-/sheepcolors"
