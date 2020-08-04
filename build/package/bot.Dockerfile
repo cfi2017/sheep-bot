@@ -41,8 +41,6 @@ COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=build /etc/passwd /etc/passwd
 COPY --from=build /etc/group /etc/group
 
-ENV GIN_MODE=release
-
 WORKDIR /app
 COPY --from=build /code/bot /app/bot
 COPY --from=build /code/config/bot.* .
