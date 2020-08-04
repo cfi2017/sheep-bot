@@ -21,7 +21,7 @@ func InitialisePersistence() (*gorm.DB, error) {
 		password = viper.GetString("db.password")
 	)
 
-	dsn := fmt.Sprintf("%s:%s@%s:%d/%s?charset=utf8&parseTime=True&loc=Local", username, password, host, port, database)
+	dsn := fmt.Sprintf("%s:%s@(%s:%d)/%s?charset=utf8&parseTime=True&loc=Local", username, password, host, port, database)
 	db, err := gorm.Open("mysql", dsn)
 	if err != nil {
 		return nil, err
