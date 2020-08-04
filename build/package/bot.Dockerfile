@@ -45,7 +45,7 @@ ENV GIN_MODE=release
 
 WORKDIR /app
 COPY --from=build /code/bot /app/bot
-# COPY --from=build /code/config/bot.* .
+COPY --from=build /code/config/bot.* .
 USER bot:bot
 
 ENTRYPOINT ["/app/bot"]
