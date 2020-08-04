@@ -5,7 +5,7 @@ FROM golang:alpine AS build
 RUN apk update && apk add --no-cache git ca-certificates tzdata upx && update-ca-certificates
 
 # don't use root
-ENV USER=letsboot
+ENV USER=bot
 ENV UID=10001
 RUN adduser \
     --disabled-password \
